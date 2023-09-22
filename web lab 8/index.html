@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" ></script>
+</head>
+<body>
+       
+    <div class="question-container">
+        <div class="heading">Product API</div>
+        <div>
+            Write JavaScript code to make an AJAX request to fetch the products.json file from the server.<br><br>
+            Create a function to parse the JSON data once it's retrieved successfully.<br><br>
+            Dynamically generate HTML elements (e.g., divs, images, and paragraphs) for each product in the catalog.
+            Display the product information on the webpage, including product names, descriptions, prices, and images.<br><br>
+            User Interface:
+            Add a search bar to allow users to filter products based on keywords.Implement sorting options (e.g., by price, by name) for the product list.
+        </div>
+        <button class="fetchButton" id="fetchButton">Fetch Products</button>
+    </div>
+
+    <div class="products-container" id="products-container">
+        <div class="actions-section">
+            <input type="text" name="" id="searchinput" oninput="setDefaultList()" placeholder="Search your desired Product Name and apply filter">
+            <select name="" id="filtervalue"  class="filter" >
+                <option value="nosort" selected>No Sorting</option>
+                <option value="name" >Sort By Name Acending</option>
+                <option value="namedesc" >Sort By Name Descending</option>
+                <option value="price">Sort By Price Acending</option>
+                <option value="pricedesc">Sort By Price Descending</option>
+            </select>
+            <button class="searchbutton" id="searchButton"><span>Apply Filters</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M440-160q-17 0-28.5-11.5T400-200v-240L161-745q-14-17-4-36t31-19h584q21 0 31 19t-4 36L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-276 240-304H240l240 304Zm0 0Z" fill="white"/></svg>
+            </button>
+
+        </div>
+
+        <table id="productlist">
+            <tr >
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <!-- <th>Image</th> -->
+            </tr>
+            <tbody class="tbody" id="tbody">
+            </tbody>
+        </table>
+        <div class="loading"  id="loading">loading...</div>
+        <div class="noproducts" id="noproducts">No Products For Now !!</div>
+    </div>
+    
+</body>
+</html
